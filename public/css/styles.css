@@ -1,0 +1,31 @@
+body {
+    background: url("../images/burger_background.jpg");
+    background-repeat: no-repeat;
+    
+}
+
+.jumbotron {
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.4);
+}
+
+.burger {
+    background-color:rgba(255, 255, 255, 0.6);
+    padding: 20px;
+}
+
+.burgerImg {
+    background: url("../images/burger.png");
+    background-repeat: no-repeat;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.crumbsImg {
+    background: url("../images/silverware.png");
+    background-repeat: no-repeat;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
