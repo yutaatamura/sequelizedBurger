@@ -6,9 +6,9 @@ $(document).ready(function() {
 
     $.ajax("/burgers/" + id, {
         type: "PUT"
-        }).then(function() {
+        }).done(function() {
     console.log("updated the ID " + id)
-    location.reload();
+    window.location.href = window.location.origin + '/'
     })
 })
 
