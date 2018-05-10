@@ -6,6 +6,8 @@ var app = express();
 
 var PORT = process.env.PORT || 8080; 
 
+var db = require("./models");
+
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -16,11 +18,13 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var router = require("./controllers/burgers_controller.js");
-app.use('/', router);
+//Routes
+require("./routes/api-routes.js")(app);
 
-
-app.listen(PORT, function() {
-    console.log(`Server listening on http://localhost: ${PORT}`);
-})
+//Syncing sequelize models and then starting Express app
+db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+        console.log(`Server listening on http://localhost: ${PORT}`);
+    });    
+});
 
