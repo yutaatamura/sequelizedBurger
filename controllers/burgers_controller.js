@@ -22,6 +22,7 @@ var db = require("../models");
             }
         }).then(function(dbBurger) {
             res.redirect(303, '/');
+            
         });
     });
 
@@ -32,6 +33,7 @@ var db = require("../models");
         })
         .then(function(dbBurger) {
             res.redirect('/');
+            // res.status(200).end();
         });
     });
 
@@ -43,6 +45,7 @@ var db = require("../models");
             }
         }).then(function() {
             res.redirect('/');
+            
         });
     });
 
