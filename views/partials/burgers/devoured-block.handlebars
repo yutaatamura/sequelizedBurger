@@ -1,4 +1,9 @@
 <tr class="table-row">
     <td><img src="../images/silverware.png" class="img-thumbnail crumbsImg"></td>
     <td>&ensp;{{id}}. {{burger_name}}</td>
+    <td>
+        <form action="/burgers/delete/{{this.id}}?_method=DELETE" method="POST">&emsp;
+            <button type="submit" class="btn btn-danger btn-sm deleteBtn">Delete Burger</button>
+        </form>
+    </td>
 </tr>
