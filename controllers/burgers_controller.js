@@ -21,7 +21,7 @@ var db = require("../models");
                 id: id
             }
         }).then(function(dbBurger) {
-            res.redirect('/');
+            res.redirect(303, '/');
         });
     });
 
