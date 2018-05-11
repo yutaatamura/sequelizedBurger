@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "mori",
+    "password": "banshee1",
     "database": "seq_burger_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
