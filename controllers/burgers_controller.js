@@ -32,7 +32,7 @@ var db = require("../models");
             burger_name: req.body.burger
         })
         .then(function(dbBurger) {
-            res.redirect('/');
+            // res.redirect('/');
             // res.status(200).end();
         });
     });

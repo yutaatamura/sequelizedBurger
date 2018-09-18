@@ -17,9 +17,9 @@ $(document).ready(function() {
     $(".createBurger").on("click", function(){
         var newBurger = $('#newBurger').val().trim();
         $.post('/burgers', {burger: newBurger}, function(data) {
-            if(data){
-                location.reload();
-            }
+            // if(data){
+            //     location.reload();
+            // }
         })
     })
 })
